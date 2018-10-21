@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { EditarComponent } from './components/editar/editar.component';
 
 const appRoutes:Routes = [
   {path: '', component: HomeComponent},
-  {path: 'cadastro', component: CadastroComponent}
+  {path: 'cadastro', component: CadastroComponent},
+  {path: 'clientes/:id', component: EditarComponent}
 ];
 
 @NgModule({
@@ -19,7 +21,8 @@ const appRoutes:Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CadastroComponent
+    CadastroComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

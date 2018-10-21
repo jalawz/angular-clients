@@ -20,4 +20,12 @@ export class ClienteService {
   removeCliente(id) {
     return this.http.delete(`${APICONFIG.baseUrl}/clientes/${id}`);
   }
+
+  findById(id) {
+    return this.http.get(`${APICONFIG.baseUrl}/clientes/${id}`);
+  }
+
+  updateCliente(cliente) {
+    return this.http.put(`${APICONFIG.baseUrl}/clientes/${cliente.id}`, cliente);
+  }
 }

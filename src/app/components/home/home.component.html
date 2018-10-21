@@ -16,6 +16,7 @@
         <th scope="col">Risco</th>
         <th scope="col">Taxa de Juros</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +25,7 @@
         <td>{{cliente.limiteCredito}}</td>
         <td>{{cliente.risco}}</td>
         <td>{{cliente.taxa}}%</td>
+        <td><a class="btn" routerLink="/clientes/{{cliente.id}}">Editar</a></td>
         <td><button class="btn btn-danger" (click)="deleteCliente(cliente.id)">Remover</button></td>
       </tr>
     </tbody>

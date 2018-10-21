@@ -35,7 +35,7 @@ export class CadastroComponent implements OnInit {
       setTimeout(() => {
         this.success = false;
         this.router.navigate(['/']);
-      }, 2000);
+      }, 1300);
     }, err => {
       this.errorMessage = true;
       this.fieldErrors = err.json().errors;

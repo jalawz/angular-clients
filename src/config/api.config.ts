@@ -1,3 +1,3 @@
 export const APICONFIG = {
-    baseUrl: 'http://localhost:8080'
+    baseUrl: 'https://pure-ocean-90338.herokuapp.com'
 }
