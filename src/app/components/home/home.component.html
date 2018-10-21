@@ -1,0 +1,30 @@
+<h1>Bem vindo!</h1>
+
+<br>
+
+<h2>Listagem de clientes</h2>
+
+<div *ngIf="isSuccess" class="alert alert-success" role="alert">
+  Registro removido com sucesso!
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Limite de Crédito</th>
+        <th scope="col">Risco</th>
+        <th scope="col">Taxa de Juros</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <th scope="row">{{cliente.nome}}</th>
+        <td>{{cliente.limiteCredito}}</td>
+        <td>{{cliente.risco}}</td>
+        <td>{{cliente.taxa}}%</td>
+        <td><button class="btn btn-danger" (click)="deleteCliente(cliente.id)">Remover</button></td>
+      </tr>
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+<div *ngIf="success" class="alert alert-success" role="alert">
+    Registro adicionado com sucesso!
+</div>
+
+<form (submit)="onSubmit()">
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" class="form-control" required="true" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome">
+  </div>
+  <div class="form-group">
+    <label>Limite de Crédito</label>
+    <input type="number" class="form-control" required="true" placeholder="Limite de Crédito" [(ngModel)]="cliente.limiteCredito" name="limiteCredito">
+  </div>
+  <div class="form-group">
+    <label>Tipo de Risco</label>
+    <select class="form-control" [(ngModel)]="cliente.risco" name="risco" required="true">
+      <option *ngFor="let risco of riscos">{{risco}}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Gravar</button>
+</form>
+
+<br><br>
+
+<div *ngIf="errorMessage">
+  <div class="alert alert-danger" role="alert" *ngFor="let error of fieldErrors">
+      {{error.defaultMessage}}
+  </div>
+</div>
