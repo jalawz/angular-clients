@@ -19,11 +19,3 @@
 </div>
 <button type="submit" class="btn btn-primary">Gravar</button>
 </form>
-
-<br><br>
-
-<div *ngIf="errorMessage">
-<div class="alert alert-danger" role="alert" *ngFor="let error of fieldErrors">
-    {{error.defaultMessage}}
-</div>
-</div>
