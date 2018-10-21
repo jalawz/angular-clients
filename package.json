@@ -11,6 +11,9 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~6.2.3",
+    "@angular-devkit/build-angular": "~0.8.0",
+    "@angular/compiler-cli": "^6.1.0",
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
@@ -25,7 +28,8 @@
     "jquery": "^3.3.1",
     "rxjs": "~6.2.0",
     "tether": "^1.4.5",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "typescript": "~2.9.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
